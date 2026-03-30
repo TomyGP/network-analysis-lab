@@ -68,4 +68,4 @@ Including:
 ---
 
 ## 👤 Author
-Tomas Brown
+Brown Tomas
