@@ -25,7 +25,7 @@ nmap -F 192.168.0.1
 - 23/tcp → filtered → Telnet
 
 📸 Evidence:
-![Nmap Scan](screenshots/nmap.png)
+![Nmap Scan](screenshots/Evidencia Nmap.png)
 
 ---
 
@@ -48,7 +48,7 @@ Including:
 - FIN / RST
 
 📸 Evidence:
-![Wireshark DNS](screenshots/dns.png)
+![Wireshark DNS](screenshots/Evidencia DNS.png)
 
 ---
 
