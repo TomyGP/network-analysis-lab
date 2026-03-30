@@ -1,64 +1,71 @@
-Analisis de red local con Nmap y Wireshark
+# 🔐 Network Analysis Lab (Nmap + Wireshark)
 
-Objetivo:
-Analizar una red local para identifica puertos abiertos, servicios activos y trafico de red.
+## 📌 Objective
+Perform a basic network analysis to identify open ports, active services, and analyze real network traffic.
 
-Herramientas utilizadas:
--Kali Linux
--Nmap
--Wireshark
+---
 
-Escaneo con Nmap
+## 🛠 Tools Used
+- Nmap
+- Wireshark
+- Kali Linux
 
-Se realizo un escaneo rapido al router:
+---
 
-Comando: 
--Nmap -sS 192.168.0.1
+## 🔍 Nmap Scan
 
-Resultados:
--53/tcp -> open -> DNS
--80/tcp -> open -> HTTP
--443/tcp-> open -> HTTPS
--22/tcp -> filtered -> SSH
--23/tcp -> filtered -> Telnet
+Command used:
+nmap -F 192.168.0.1
 
-'/home/kali/Desktop/network-analysis-lab/screenshots/Evidencia Nmap.png' 
+### Results:
+- 53/tcp → open → DNS
+- 80/tcp → open → HTTP
+- 443/tcp → open → HTTPS
+- 22/tcp → filtered → SSH
+- 23/tcp → filtered → Telnet
 
-Analisis de Wireshark
+📸 Evidence:
+![Nmap Scan](screenshots/nmap.png)
 
-DNS:
-Se observo una consulta DNS a: 
+---
+
+## 🌐 Wireshark Analysis
+
+### DNS Traffic
+Captured DNS query for:
 api.github.com
 
-Respuesta:
-api.github.com -> 34.160.144.191
+Response:
+api.github.com → 34.160.144.191
 
-Trafico HTTPS
-
-se detecto trafico TCP hacia:
+### HTTPS Traffic
+Observed TCP communication with:
 34.160.144.191:443
 
-incluyendo;
+Including:
+- SYN
+- ACK
+- FIN / RST
 
-SYN
-ACK
-FIN / RST
+📸 Evidence:
+![Wireshark DNS](screenshots/dns.png)
 
-'/home/kali/Desktop/network-analysis-lab/screenshots/Evidencia DNS.png' 
+---
 
-Concluciones:
+## 🧠 Key Findings
+- Identified exposed services on local network
+- Observed DNS resolution process
+- Analyzed encrypted HTTPS traffic
+- Understood real network communication flow
 
--Se identificaron servicios activos en el router
--Se analizo el proceso completo de resoluciones DNS
--Se observo trafico cifrado mediante HTTPS
--Se comprendio el flujo de comunicacion en una red real
+---
 
-Aprendizajes:
+## 🚀 Future Improvements
+- Deep packet inspection
+- Suspicious traffic detection
+- Advanced Nmap scanning techniques
 
--Se uso Nmap para escaneo de puertos
--Interpretacion de estados
--Analisis de trafico con Wireshark
--Funcionamiento del protocolo DNS
+---
 
-Autor:
-Brown Tomas
+## 👤 Author
+Tomas Brown
